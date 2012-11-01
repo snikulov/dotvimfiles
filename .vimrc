@@ -24,7 +24,7 @@ if has("gui_running")
     colorscheme desert 
     set lines=43 columns=240
 else
-    colorscheme desert 
+    colorscheme darkblue
 end
 
 " Folding

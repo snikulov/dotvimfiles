@@ -10,7 +10,13 @@ set winminwidth=1
 set winwidth=1
 set equalalways
 
+" set encoding=utf-8
 set background=dark
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
+"match ColorColumn /\s+$/
+match ColorColumn /\s\+$\| \+\ze\t/
+autocmd FileType c,cpp,java autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
@@ -20,6 +26,7 @@ filetype plugin on
 
 if has("gui_running")
     set guioptions-=T
+    set guioptions-=m
     set guifont=Consolas:h14:cRUSSIAN
     colorscheme molokai 
     set lines=43 columns=240

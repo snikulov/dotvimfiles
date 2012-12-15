@@ -16,7 +16,13 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 
 "match ColorColumn /\s+$/
 match ColorColumn /\s\+$\| \+\ze\t/
+
 autocmd FileType c,cpp,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd BufNewFile,BufRead *.cpp set formatprg=astyle\ -s4pA1
+autocmd BufNewFile,BufRead *.c set formatprg=astyle\ -s4pA1
+autocmd BufNewFile,BufRead *.cxx set formatprg=astyle\ -s4pA1
+autocmd BufNewFile,BufRead *.h set formatprg=astyle\ -s4pA1
+autocmd BufNewFile,BufRead *.hpp set formatprg=astyle\ -s4pA1
 
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after

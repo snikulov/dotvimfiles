@@ -40,8 +40,9 @@ else
     colorscheme darkblue
 end
 
-" Folding
 syntax on
-set foldmethod=syntax
+set hlsearch
+" Folding
+"set foldmethod=syntax
 set number
 

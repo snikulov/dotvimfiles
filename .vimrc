@@ -11,7 +11,8 @@ set winwidth=1
 set equalalways
 set laststatus=2
 
-"set encoding=utf-8
+set shm=atI
+set encoding=utf-8
 set background=dark
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 

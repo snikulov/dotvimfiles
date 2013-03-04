@@ -37,7 +37,7 @@ filetype plugin on
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
-    set guifont=Consolas:h14:cRUSSIAN
+    set guifont=Meslo_LG_S:h14:cRUSSIAN
     colorscheme molokai 
     set lines=43 columns=240
 else

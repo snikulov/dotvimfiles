@@ -57,9 +57,13 @@ else
 end
 
 " tags
-set tags+=~/tags/boost.tags
+" set tags+=~/tags/boost.tags
 
 " fake cscope
+let GtagsCscope_Auto_Load = 1
+let GtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+set cscopetag
 set csprg=gtags-cscope
 cs add GTAGS
 

@@ -56,4 +56,16 @@ else
     colorscheme darkblue
 end
 
+" tags
+set tags+=~/tags/boost.tags
 
+" fake cscope
+set csprg=gtags-cscope
+cs add GTAGS
+
+" gtags mapping
+:map <C-]> :Gtags<CR><CR>
+:map <C-\> :Gtags -r<CR><CR>
+:map <F10> :cclose<CR>
+:map <F11> :cp<CR>
+:map <F12> :cn<CR>

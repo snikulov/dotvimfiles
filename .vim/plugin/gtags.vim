@@ -1,11 +1,11 @@
 " File: gtags.vim
 " Author: Tama Communications Corporation
-" Version: 0.6
-" Last Modified: September 6, 2011
+" Version: 0.6.4
+" Last Modified: Nov 24, 2012
 "
 " Copyright and licence
 " ---------------------
-" Copyright (c) 2004, 2008, 2010, 2011 Tama Communications Corporation
+" Copyright (c) 2004, 2008, 2010, 2011, 2012 Tama Communications Corporation
 "
 " This file is part of GNU GLOBAL.
 "
@@ -30,7 +30,7 @@
 " Installation
 " ------------
 " Drop the file in your plug-in directory or source it from your vimrc.
-" To use this script, you need the GNU GLOBAL-5.7 or later installed
+" To use this script, you need the GNU GLOBAL-6.0 or later installed
 " in your machine.
 "
 " Usage
@@ -198,8 +198,20 @@ if !exists("g:Gtags_VerticalWindow")
     let g:Gtags_VerticalWindow = 0
 endif
 
-if !exists("Gtags_Auto_Map")
-    let Gtags_Auto_Map = 0
+if !exists("g:Gtags_Auto_Map")
+    let g:Gtags_Auto_Map = 0
+endif
+
+if !exists("g:Gtags_Auto_Update")
+    let g:Gtags_Auto_Update = 0
+endif
+
+if !exists("g:Gtags_No_Auto_Jump")
+    if !exists("g:Dont_Jump_Automatically")
+	let g:Gtags_No_Auto_Jump = 0
+    else
+	let g:Gtags_No_Auto_Jump = g:Dont_Jump_Automatically
+    endif
 endif
 
 " -- ctags-x format 
@@ -362,7 +374,7 @@ function! s:ExecLoad(option, long_option, pattern)
     if v:shell_error != 0
         if v:shell_error != 0
             if v:shell_error == 2
-                call s:Error('invalid arguments. (gtags.vim requires GLOBAL 5.7 or later)')
+                call s:Error('invalid arguments. please use the latest GLOBAL.')
             elseif v:shell_error == 3
                 call s:Error('GTAGS not found.')
             else
@@ -395,7 +407,11 @@ function! s:ExecLoad(option, long_option, pattern)
     " Parse the output of 'global -x or -t' and show in the quickfix window.
     let l:efm_org = &efm
     let &efm = g:Gtags_Efm
-    cexpr! l:result
+    if g:Gtags_No_Auto_Jump == 1
+        cgete l:result
+    else
+        cexpr! l:result
+    endif
     let &efm = l:efm_org
 endfunction
 
@@ -446,6 +462,12 @@ function! s:Gozilla()
     let l:filename = expand("%")
     let l:result = system('gozilla +' . l:lineno . ' ' . l:filename)
 endfunction
+"
+" Auto update of tag files using incremental update facility.
+"
+function! s:GtagsAutoUpdate()
+    let l:result = system(s:global_command . " -u --single-update=\"" . expand("%") . "\"")
+endfunction
 
 "
 " Custom completion.
@@ -478,6 +500,10 @@ endfunction
 command! -nargs=* -complete=custom,GtagsCandidate Gtags call s:RunGlobal(<q-args>)
 command! -nargs=0 GtagsCursor call s:GtagsCursor()
 command! -nargs=0 Gozilla call s:Gozilla()
+command! -nargs=0 GtagsUpdate call s:GtagsAutoUpdate()
+if g:Gtags_Auto_Update == 1
+	:autocmd! BufWritePost * call s:GtagsAutoUpdate()
+endif
 " Suggested map:
 if g:Gtags_Auto_Map == 1
 	:nmap <F2> :copen<CR>

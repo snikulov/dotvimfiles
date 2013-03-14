@@ -18,14 +18,10 @@ set background=dark
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 syntax on
-set incsearch
 set hlsearch
 " Folding
 "set foldmethod=syntax
 set number
-
-"match ColorColumn /\s+$/
-match ColorColumn /\s\+$\| \+\ze\t/
 
 autocmd FileType c,cpp,java autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.cpp set formatprg=astyle\ -s4pA1
@@ -52,8 +48,11 @@ if has("gui_running")
     set guifont=Meslo_LG_S:h18:cRUSSIAN
     colorscheme molokai
     set lines=43 columns=240
+    hi TrailSpace guifg=#FF0000 guibg=#FF0000
+    match TrailSpace /\s\+$\| \+\ze\t/
 else
     colorscheme darkblue
+    match ColorColumn /\s+$/
 end
 
 " tags

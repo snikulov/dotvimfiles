@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = git@github.com:snikulov/snipmate.vim.git
+[submodule ".vim/bundle/vim_cmake"]
+	path = .vim/bundle/vim_cmake
+	url = git://github.com/vhdirk/vim-cmake.git

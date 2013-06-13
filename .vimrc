@@ -4,11 +4,11 @@ set smartindent
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-set winminheight=0
-set winheight=50
-set winminwidth=1
-set winwidth=1
-set equalalways
+" set winminheight=0
+" set winheight=50
+" set winminwidth=1
+" set winwidth=1
+" set equalalways
 set laststatus=2
 set fileencoding=utf-8
 

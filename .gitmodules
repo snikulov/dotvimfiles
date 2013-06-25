@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vim_cmake"]
 	path = .vim/bundle/vim_cmake
 	url = git://github.com/vhdirk/vim-cmake.git
+[submodule ".vim/bundle/vim_qargs"]
+	path = .vim/bundle/vim_qargs
+	url = git://github.com/nelstrom/vim-qargs.git

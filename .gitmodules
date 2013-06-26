@@ -25,3 +25,9 @@
 [submodule ".vim/bundle/vim_qargs"]
 	path = .vim/bundle/vim_qargs
 	url = git://github.com/nelstrom/vim-qargs.git
+[submodule ".vim/bundle/l9"]
+	path = .vim/bundle/l9
+	url = git://github.com/vim-scripts/L9.git
+[submodule ".vim/bundle/fuf"]
+	path = .vim/bundle/fuf
+	url = git://github.com/vim-scripts/FuzzyFinder.git

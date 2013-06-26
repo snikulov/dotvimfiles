@@ -1,5 +1,18 @@
 set nocompatible
 
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+    set langmenu=en_US.UTF-8
+"    language en
+    let $LANG = 'en_US'
+endif
+
+execute pathogen#infect()
+execute pathogen#helptags()
+
+syntax on
+filetype plugin indent on
+
 set smartindent
 set expandtab
 set shiftwidth=4
@@ -18,7 +31,6 @@ set encoding=utf-8
 set background=dark
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
-syntax on
 set hlsearch
 " Folding
 "set foldmethod=syntax
@@ -31,17 +43,6 @@ autocmd BufNewFile,BufRead *.cxx set formatprg=astyle\ -s4pA1
 autocmd BufNewFile,BufRead *.h set formatprg=astyle\ -s4pA1
 autocmd BufNewFile,BufRead *.hpp set formatprg=astyle\ -s4pA1
 
-if has('win32') || has('win64')
-    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-    set langmenu=en_US.UTF-8
-"    language en
-    let $LANG = 'en_US'
-endif
-
-execute pathogen#infect()
-execute pathogen#helptags()
-
-filetype plugin on
 
 if has("gui_running")
     set guioptions-=T

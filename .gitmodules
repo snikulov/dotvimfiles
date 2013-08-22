@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/fuf"]
 	path = .vim/bundle/fuf
 	url = git://github.com/vim-scripts/FuzzyFinder.git
+[submodule ".vim/bundle/vim_airline"]
+	path = .vim/bundle/vim_airline
+	url = https://github.com/bling/vim-airline.git

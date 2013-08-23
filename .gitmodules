@@ -34,3 +34,12 @@
 [submodule ".vim/bundle/vim_airline"]
 	path = .vim/bundle/vim_airline
 	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/bundle/tlib"]
+	path = .vim/bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/mw_utils"]
+	path = .vim/bundle/mw_utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/vim_snipmate"]
+	path = .vim/bundle/vim_snipmate
+	url = git://github.com/garbas/vim-snipmate.git

@@ -61,19 +61,16 @@ end
 " set tags+=~/tags/boost.tags
 
 " fake cscope
-let GtagsCscope_Auto_Load = 1
-let GtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
-set cscopetag
-set csprg=gtags-cscope
-cs add GTAGS
+"let GtagsCscope_Auto_Load = 1
+"let GtagsCscope_Auto_Map = 1
+"let GtagsCscope_Quiet = 1
+"set cscopetag
 
 " gtags mapping
-":map <C-]> :Gtags<CR><CR>
-":map <C-\> :Gtags -r<CR><CR>
-":map <F10> :cclose<CR>
-":map <F11> :cp<CR>
-":map <F12> :cn<CR>
-
+:map <C-]> :Gtags<CR><CR>
+:map <C-\> :Gtags -r<CR><CR>
+:map <F10> :cclose<CR>
+:map <F11> :cp<CR>
+:map <F12> :cn<CR>
 
 nnoremap <F8> :NERDTreeToggle %:p:h<CR>

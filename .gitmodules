@@ -46,3 +46,9 @@
 [submodule ".vim/bundle/vim_snippets"]
 	path = .vim/bundle/vim_snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule ".vim/bundle/unite.vim"]
+	path = .vim/bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule ".vim/bundle/unite_gtags"]
+	path = .vim/bundle/unite_gtags
+	url = https://github.com/hewes/unite-gtags.git

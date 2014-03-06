@@ -72,5 +72,8 @@ end
 :map <F10> :cclose<CR>
 :map <F11> :cp<CR>
 :map <F12> :cn<CR>
+:map <F5>  :Unite gtags/def<CR>
+:map <C-F5>  :Unite gtags/grep<CR>
+:map <F6>  :Unite gtags/ref<CR>
 
 nnoremap <F8> :NERDTreeToggle %:p:h<CR>

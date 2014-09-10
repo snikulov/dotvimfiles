@@ -13,6 +13,16 @@ execute pathogen#helptags()
 syntax on
 filetype plugin indent on
 
+let g:NERDTreeDirArrows = 1  "use pretty arrow chars instead of the old
+let g:EasyGrepRecursive = 1  "'Recursive mode'for EasyGrep
+let g:EasyGrepCommand = 1    "Use grepprg
+let g:EasyGrepFilesToExclude = "*.svn\*,*.git\*,*.hg\*"
+let g:python_highlight_all = 1
+let g:xml_syntax_folding = 1
+let g:ruby_fold = 1
+let g:airline_theme='light'
+let g:airline_detect_whitespace=0
+
 set smartindent
 set expandtab
 set shiftwidth=4

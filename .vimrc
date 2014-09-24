@@ -58,7 +58,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=m
     set guifont=Meslo_LG_S:h18:cRUSSIAN
-    colorscheme molokai
+    colorscheme darkblue
     set lines=43 columns=240
     hi TrailSpace guifg=#FF0000 guibg=#FF0000
     match TrailSpace /\s\+$\| \+\ze\t/

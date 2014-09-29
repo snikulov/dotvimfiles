@@ -45,7 +45,7 @@
 	url = git://github.com/garbas/vim-snipmate.git
 [submodule ".vim/bundle/vim_snippets"]
 	path = .vim/bundle/vim_snippets
-	url = git@github.com:honza/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
 [submodule ".vim/bundle/unite.vim"]
 	path = .vim/bundle/unite.vim
 	url = https://github.com/Shougo/unite.vim.git

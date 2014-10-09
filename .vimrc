@@ -57,7 +57,13 @@ autocmd BufNewFile,BufRead *.hpp set formatprg=astyle\ -s4pA1
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
-    set guifont=Meslo_LG_S:h18:cRUSSIAN
+
+    if has('win32') || has('win64')
+        set guifont=Meslo_LG_S:h18:cRUSSIAN
+    else
+        set guifont=Monospace\ 18
+    end
+
     colorscheme darkblue
     set lines=43 columns=240
     hi TrailSpace guifg=#FF0000 guibg=#FF0000

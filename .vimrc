@@ -59,7 +59,7 @@ if has("gui_running")
     set guioptions-=m
 
     if has('win32') || has('win64')
-        set guifont=Meslo_LG_S:h18:cRUSSIAN
+        set guifont=Consolas:h18:cRUSSIAN
     else
         set guifont=Monospace\ 18
     end

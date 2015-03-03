@@ -21,7 +21,7 @@ let g:python_highlight_all = 1
 let g:xml_syntax_folding = 1
 let g:ruby_fold = 1
 let g:airline_theme='light'
-let g:airline_detect_whitespace=0
+let g:airline#extensions#whitespace#enabled = 0
 
 set smartindent
 set expandtab

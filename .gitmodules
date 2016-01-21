@@ -37,9 +37,6 @@
 [submodule ".vim/bundle/mw_utils"]
 	path = .vim/bundle/mw_utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule ".vim/bundle/vim_snipmate"]
-	path = .vim/bundle/vim_snipmate
-	url = git://github.com/garbas/vim-snipmate.git
 [submodule ".vim/bundle/vim_snippets"]
 	path = .vim/bundle/vim_snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -61,3 +58,6 @@
 [submodule ".vim/bundle/youcompleteme"]
 	path = .vim/bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/bundle/ultisnips"]
+	path = .vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
